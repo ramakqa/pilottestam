@@ -79,6 +79,12 @@ const Article = ({ article }) => {
   );
 };
 
+const Ram = ({}) => {
+  return (
+    <h1>Hello Ram!</h1>
+  )
+}
+
 const Index = ({ articles, navigation, settings }) => {
   return (
     <Layout
@@ -90,6 +96,7 @@ const Index = ({ articles, navigation, settings }) => {
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
       <Bounded size="widest">
+        <Ram></Ram>
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (
             <Article key={article.id} article={article} />

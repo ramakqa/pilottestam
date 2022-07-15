@@ -51,6 +51,17 @@
           "allowTargetBlank": true,
           "multi": "paragraph,em,strong,hyperlink"
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "algolia_search": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

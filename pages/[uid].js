@@ -35,7 +35,6 @@ export async function getStaticProps({ params, previewData }) {
       navigation,
       settings,
     },
-    revalidate: 10,
   };
 }
 
