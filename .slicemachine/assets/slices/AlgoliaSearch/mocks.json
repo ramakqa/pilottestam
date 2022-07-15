@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "algolia_search",
+    "items": [],
+    "primary": {
+      "search": [
+        {
+          "type": "paragraph",
+          "text": "Esse veniam excepteur sunt excepteur commodo laboris eiusmod et minim ullamco adipisicing officia dolore ad reprehenderit.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

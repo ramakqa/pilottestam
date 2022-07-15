@@ -1,0 +1,24 @@
+{
+  "id": "f5d2f482-2f6f-495c-b754-1207119e461f",
+  "uid": "commodi-dolorem-excepturi",
+  "type": "article",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Scale real-time markets",
+        "spans": []
+      }
+    ],
+    "publishDate": "2012-01-02",
+    "featuredImage": {
+      "dimensions": {
+        "width": 2000,
+        "height": 1500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=2000&h=1500&fit=crop"
+    }
+  }
+}
