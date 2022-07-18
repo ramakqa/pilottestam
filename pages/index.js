@@ -3,6 +3,12 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
+import algoliasearch from 'algoliasearch/lite';
+import { InstantSearch, SearchBox } from 'react-instantsearch-hooks-web';
+
+const searchClient = algoliasearch('3JJXJQ6L4J', '4120b0e8f8feea9e15ed26ec04d2519c');
+
+
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { Bounded } from "../components/Bounded";
@@ -79,9 +85,23 @@ const Article = ({ article }) => {
   );
 };
 
-const Ram = ({}) => {
+const AlgoliaSearch = ({}) => {
   return (
-    <h1>Hello Ram!</h1>
+    <section className="pb-8">
+      <div className="mx-auto w-full max-w-xl">      
+        <InstantSearch indexName="instant_search" searchClient={searchClient}>
+          <SearchBox
+            classNames={{
+              root: 'p-3',
+              form: 'relative',
+              input: 'block w-full pl-9 pr-3 py-2 bg-white border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1',
+              submitIcon: 'absolute top-0 right-0 bottom-0 w-6',
+              resetIcon: 'absolute top-0 right-0 bottom-0 w-6',
+            }}
+          />
+        </InstantSearch>
+      </div>
+    </section>
   )
 }
 
@@ -96,7 +116,7 @@ const Index = ({ articles, navigation, settings }) => {
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
       <Bounded size="widest">
-        <Ram></Ram>
+        <AlgoliaSearch></AlgoliaSearch>
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (
             <Article key={article.id} article={article} />

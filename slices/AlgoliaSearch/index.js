@@ -1,6 +1,6 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-hooks-web';
 import 'instantsearch.css/themes/satellite.css';
 
 const searchClient = algoliasearch('3JJXJQ6L4J', '4120b0e8f8feea9e15ed26ec04d2519c');
