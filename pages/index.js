@@ -13,6 +13,7 @@ import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { Bounded } from "../components/Bounded";
 import { Heading } from "../components/Heading";
+import { AlgoliaSearch } from "../components/AlgoliaSearch";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
