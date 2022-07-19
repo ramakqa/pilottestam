@@ -13,12 +13,12 @@ function Hit({ hit }) {
 }
 
 export const AlgoliaSearch = ({ slice }) => (
-  <section className="px-4 py-8">
+  <section className="pb-8">
     <div className="mx-auto w-full max-w-xl">      
-      <InstantSearch indexName="instant_search" searchClient={searchClient}>
+      <InstantSearch indexName="pilot1_search1" searchClient={searchClient}>
         <SearchBox
           classNames={{
-            root: 'p-3 shadow-sm',
+            root: 'p-4',
             form: 'relative',
             input: 'block w-full pl-9 pr-3 py-2 bg-white border border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md focus:ring-1',
             submitIcon: 'absolute top-0 left-0 bottom-0 w-6',
