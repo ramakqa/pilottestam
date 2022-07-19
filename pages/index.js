@@ -8,6 +8,7 @@ import { Layout } from "../components/Layout";
 import { Bounded } from "../components/Bounded";
 import { Heading } from "../components/Heading";
 import { AlgoliaSearch } from "../components/AlgoliaSearch";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -89,9 +90,16 @@ const Index = ({ articles, navigation, settings }) => {
     >
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
+        <div className="absolute top-8 right-6">
+          <select className="outline-0" data-choose-theme>
+            <option value="">Default</option>
+            <option value="dark">Dark</option>
+            <option value="corporate">Corporate</option>
+          </select>
+        </div>
       </Head>
+      <AlgoliaSearch></AlgoliaSearch>
       <Bounded size="widest">
-        <AlgoliaSearch></AlgoliaSearch>
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (
             <Article key={article.id} article={article} />
