@@ -5,6 +5,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
+import { AlgoliaSearch } from "../components/AlgoliaSearch";
 
 const Profile = ({ name, description, profilePicture }) => {
   return (
@@ -83,6 +84,7 @@ export const Header = ({
         )}
         {withDivider && <HorizontalDivider />}
       </div>
+      <AlgoliaSearch></AlgoliaSearch>
     </Bounded>
   );
 };

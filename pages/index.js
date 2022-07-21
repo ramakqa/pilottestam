@@ -7,7 +7,6 @@ import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { Bounded } from "../components/Bounded";
 import { Heading } from "../components/Heading";
-import { AlgoliaSearch } from "../components/AlgoliaSearch";
 import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
@@ -98,7 +97,6 @@ const Index = ({ articles, navigation, settings }) => {
           </select>
         </div>
       </Head>
-      <AlgoliaSearch></AlgoliaSearch>
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
           {articles.map((article) => (

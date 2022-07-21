@@ -1,4 +1,5 @@
 import algoliasearch from 'algoliasearch/lite';
+import { PrismicLink} from "@prismicio/react";
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-hooks-web';
 import 'instantsearch.css/themes/satellite.css';
 
@@ -6,14 +7,12 @@ const searchClient = algoliasearch('JDU2Y7CH79', 'fc3e9b86ed9ba8626af648bd639f75
 
 function Hit({ hit }) {
   return (
-    <article>
-      <h1>{hit.firstname}</h1>
-    </article>
+      <PrismicLink href={`/articles/${hit.slug}`}>{hit.title}</PrismicLink>
   );
 }
 
-export const AlgoliaSearch = ({ slice }) => (
-  <section className="pb-8">
+export const AlgoliaSearch = ({ }) => (
+  <section className="pt-8">
     <div className="mx-auto w-full max-w-xl">      
       <InstantSearch indexName="pilot1_search1" searchClient={searchClient}>
         <SearchBox
