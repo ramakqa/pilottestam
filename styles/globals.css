@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 [data-theme="dark"] a, [data-theme="dark"] h2 {
     color: #ffffff;
 }
