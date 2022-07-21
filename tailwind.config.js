@@ -9,7 +9,7 @@ module.exports = {
     extend: {},
   },
   daisyui: {
-    themes: ["light", "dark", "corporate"],
+    themes: ["light", "dark", "retro"],
   },
   plugins: [require("@tailwindcss/aspect-ratio"), require("daisyui")],
 };

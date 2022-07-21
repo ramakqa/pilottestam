@@ -50,6 +50,26 @@ const NavItem = ({ children }) => {
   );
 };
 
+const ThemeSwitch = ({}) => {
+  return (
+    <label className="swap swap-rotate">
+      <input type="checkbox" />
+      <i
+      className="w-6 h-6 iconify swap-on"
+        data-icon="tabler:sun"
+        data-set-theme="light"
+        >light</i
+      >
+      <i
+      className="w-6 h-6 iconify swap-off"
+        data-icon="tabler:moon"
+        data-set-theme="dark"
+        >dark</i
+      >
+    </label>
+  );
+};
+
 export const Header = ({
   withDivider = true,
   withProfile = true,

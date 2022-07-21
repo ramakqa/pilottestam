@@ -13,6 +13,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=pilottestram"></script>
+        <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
       </Head>
       <body className="overflow-x-hidden antialiased">
         <Main />

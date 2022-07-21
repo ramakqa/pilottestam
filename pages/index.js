@@ -88,14 +88,8 @@ const Index = ({ articles, navigation, settings }) => {
       settings={settings}
     >
       <Head>
-        <title>{prismicH.asText(settings.data.name)}</title>
-        <div className="absolute top-8 right-6">
-          <select className="outline-0" data-choose-theme>
-            <option value="">Default</option>
-            <option value="dark">Dark</option>
-            <option value="corporate">Corporate</option>
-          </select>
-        </div>
+        <title>{prismicH.asText(settings.data.name)}</title> 
+        <ThemeSwitcher></ThemeSwitcher>       
       </Head>
       <Bounded size="widest">
         <ul className="grid grid-cols-1 gap-16">
