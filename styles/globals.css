@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-[data-theme="dark"] a, [data-theme="dark"] h2 {
+[data-theme="dark"] a, [data-theme=dark] p, [data-theme=dark] div, [data-theme=dark] h1, [data-theme=dark] h2, [data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] select {
     color: #ffffff;
-}
-[data-theme="dark"] select {
-    background: #2a303c;
 }
 [data-theme="dark"] .ais-SearchBox-input {
     color: #ffffff;
@@ -18,9 +14,26 @@
     background: #2a303c;
     box-shadow: 0 0 0 1px rgb(255 255 255 / 5%), 0 1px 3px 0 rgb(255 255 255 / 15%);
 }
-[data-theme="dark"] .grid p {
-    color: #999;
+[data-theme="dark"] input, [data-theme="dark"] textarea {
+    color: #ffffff;
+    background: #2a303c;
 }
-[data-theme="retro"] select {
+[data-theme="dark"] .bg-slate-100 {
+    background: rgba(255, 255, 255, 0.1);
+}
+/*==============================================*/
+[data-theme="retro"] .ais-SearchBox-input {
     background: #e4d8b4;
+    border-color: inherit;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 55%), 0 1px 3px 0 rgb(0 0 0 / 55%);
+}
+[data-theme="retro"] input, [data-theme="retro"] textarea {
+    background: #e4d8b4;
+    border-color: #2a303c;
+}
+[data-theme="retro"] hr {
+    background: #2a303c;
+}
+[data-theme="retro"] .bg-slate-100 {
+    background: rgba(255, 255, 255, 0.2);
 }

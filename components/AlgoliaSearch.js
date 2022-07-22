@@ -1,15 +1,34 @@
+import React, { useState } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import { PrismicLink} from "@prismicio/react";
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-hooks-web';
 import 'instantsearch.css/themes/satellite.css';
 
-const searchClient = algoliasearch('JDU2Y7CH79', 'fc3e9b86ed9ba8626af648bd639f7570');
+const algoliaClient = algoliasearch('JDU2Y7CH79', 'fc3e9b86ed9ba8626af648bd639f7570');
 
 function Hit({ hit }) {
   return (
       <PrismicLink href={`/articles/${hit.slug}`}>{hit.title}</PrismicLink>
   );
 }
+
+const searchClient = {
+  ...algoliaClient,
+  search(requests) {
+    if (requests.every(({ params }) => !params.query)) {
+      return Promise.resolve({
+        results: requests.map(() => ({
+          hits: [],
+          nbHits: 0,
+          nbPages: 0,
+          page: 0,
+          processingTimeMS: 0,
+        })),
+      });
+    }
+    return algoliaClient.search(requests);
+  },
+};
 
 export const AlgoliaSearch = ({ }) => (
   <section className="pt-8">
