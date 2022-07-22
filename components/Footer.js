@@ -5,7 +5,7 @@ import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
 
-const SignUpForm = ({ settings }) => {
+/*const SignUpForm = ({ settings }) => {
   return (
     <div className="px-4">
       <form
@@ -59,9 +59,26 @@ const SignUpForm = ({ settings }) => {
       </form>
     </div>
   );
+};*/
+
+export const Footer = ({ }) => {
+  return (
+    <Bounded as="footer">
+      <div className="grid grid-cols-1 justify-items-center gap-24">
+        <HorizontalDivider />
+        <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
+          Proudly published using{" "}
+          <PrismicLink href="https://prismic.io" className="secondary-content">
+            Prismic 
+          </PrismicLink>
+          {" "}test by Ram
+        </div>
+      </div>
+    </Bounded>
+  );
 };
 
-export const Footer = ({ withSignUpForm = true, settings }) => {
+/*export const Footer = ({ withSignUpForm = true, settings }) => {
   return (
     <Bounded as="footer">
       <div className="grid grid-cols-1 justify-items-center gap-24">
@@ -76,4 +93,4 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
       </div>
     </Bounded>
   );
-};
+};*/
