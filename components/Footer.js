@@ -39,7 +39,7 @@ const SignUpForm = ({ settings }) => {
                 type="email"
                 placeholder="jane.doe@example.com"
                 required={true}
-                className="w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-10 text-slate-800 placeholder-slate-400"
+                className="w-full rounded-none border-b border-slate-200 py-3 pl-3 pr-10 primary-content placeholder-slate-400"
               />
             </label>
             <button
@@ -69,7 +69,7 @@ export const Footer = ({ withSignUpForm = true, settings }) => {
         {withSignUpForm && <SignUpForm settings={settings} />}
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
           Proudly published using{" "}
-          <PrismicLink href="https://prismic.io" className="text-slate-700">
+          <PrismicLink href="https://prismic.io" className="secondary-content">
             Prismic
           </PrismicLink>
         </div>

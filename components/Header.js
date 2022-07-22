@@ -33,7 +33,7 @@ const Profile = ({ name, description, profilePicture }) => {
               </Heading>
             )}
             {prismicH.isFilled.richText(description) && (
-              <p className="font-serif text-2xl italic leading-normal tracking-tight text-slate-500">
+              <p className="font-serif text-2xl italic leading-normal tracking-tight primary-content">
                 <PrismicText field={description} />
               </p>
             )}
@@ -46,7 +46,7 @@ const Profile = ({ name, description, profilePicture }) => {
 
 const NavItem = ({ children }) => {
   return (
-    <li className="font-semibold tracking-tight text-slate-800">{children}</li>
+    <li className="font-semibold tracking-tight primary-content">{children}</li>
   );
 };
 
