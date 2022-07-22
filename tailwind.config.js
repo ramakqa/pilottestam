@@ -10,6 +10,7 @@ module.exports = {
   },
   daisyui: {
     themes: ["light", "dark", "retro"],
+    darkTheme: "dark",
   },
   plugins: [require("@tailwindcss/aspect-ratio"), require("daisyui")],
 };
